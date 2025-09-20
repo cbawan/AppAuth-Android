@@ -41,7 +41,7 @@ try {
 
 project.ext {
     minSdkVersion = 16
-    compileSdkVersion = 33
+    compileSdkVersion = 35
 
     googleVersions = [
         glide                 : '4.12.0',
