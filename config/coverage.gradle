@@ -22,6 +22,11 @@ task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
     }
     // Class R is used, but usage will not be covered, so ignore this class from report
     afterEvaluate {
+
+        tasks.named('publishReleasePublicationToMavenLocal').configure {
+            dependsOn tasks.named('bundleReleaseAar')
+        }
+
         getClassDirectories().setFrom(
             fileTree(
                 dir: 'build/intermediates/javac/debug/classes',
