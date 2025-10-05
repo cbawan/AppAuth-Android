@@ -33,7 +33,7 @@ tasks.register('javadocJar', Jar) {
 }
 
 afterEvaluate {
-    // fixes issue where javadoc can't find android symbols ref: http://stackoverflow.com/a/34572606
+    // fixes issue where javadoc can't find android symbols ref:  http://stackoverflow.com/a/34572606
 
     androidJavadoc.classpath += files(android.libraryVariants.collect { variant ->
         variant.javaCompileProvider.get().classpath.files
