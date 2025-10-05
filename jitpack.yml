@@ -1,0 +1,4 @@
+jdk:
+  - openjdk17
+install:
+  - ./gradlew clean -xtest -xlint -x:library:androidJavadoc :library:assemble :library:publishToMavenLocal
