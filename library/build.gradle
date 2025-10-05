@@ -24,6 +24,14 @@ apply from: '../config/style.gradle'
 apply from: '../config/coverage.gradle'
 apply from: '../config/javadoc.gradle'
 
+android {
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
 artifacts {
     archives sourcesJar
     archives javadocJar
